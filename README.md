@@ -1,6 +1,6 @@
 # Sonido estéreo y ficheros WAVE
 
-## Nom i cognoms
+## Nom i cognoms Maider Duró i Victoria Blanco
 
 ## El formato WAVE
 
