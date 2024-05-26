@@ -188,6 +188,7 @@ para que se realice el realce sintáctico en Python del mismo (no vale insertar 
 pantalla, debe hacerse en formato *markdown*).
 
 ##### Código de `estereo2mono()`
+
 ```
 def estereo2mono(ficEste, ficMono, canal=2):
     """
@@ -326,7 +327,8 @@ def mono2estereo(ficIzq, ficDer, ficEste):
                 datos_estereo = struct.pack('<hh', muestra_izq, muestra_der)
                 out_f.write(datos_estereo)
 
-mono2estereo('komm_izq.wav', 'komm_der.wav', 'komm_reconstruido.wav') ```
+mono2estereo('komm_izq.wav', 'komm_der.wav', 'komm_reconstruido.wav') 
+```
 
 ##### Código de `codEstereo()`
 ```
@@ -389,7 +391,8 @@ def codEstereo(ficEste, ficCod):
                 datos_32bits = struct.pack('<ii', semisuma, semidif)
                 f_out.write(datos_32bits)
 
-codEstereo('komm.wav', 'komm_codificado.wav') ```
+codEstereo('komm.wav', 'komm_codificado.wav') 
+```
 
 ##### Código de `decEstereo()`
 
@@ -454,7 +457,8 @@ def decEstereo(ficCod, ficEste):
                 f_out.write(datos_16bits)
 
 
-decEstereo('komm_codificado.wav', 'komm_reconstruido_estereo.wav') ```
+decEstereo('komm_codificado.wav', 'komm_reconstruido_estereo.wav') 
+```
 
 #### Subida del resultado al repositorio GitHub y *pull-request*
 
