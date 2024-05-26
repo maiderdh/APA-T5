@@ -189,8 +189,7 @@ pantalla, debe hacerse en formato *markdown*).
 
 ##### Código de `estereo2mono()`
 
-```
-def estereo2mono(ficEste, ficMono, canal=2):
+``` def estereo2mono(ficEste, ficMono, canal=2):
     """
     Convierte un archivo WAVE estéreo a monofónico.
 
@@ -256,11 +255,11 @@ if __name__ == "__main__":
 
 #Crear archivos mono para canal IZQ y DER
 estereo2mono('komm.wav', 'komm_izq.wav', canal=0)  # Canal izquierdo
-estereo2mono('komm.wav', 'komm_der.wav', canal=1)  # Canal derecho ```
+estereo2mono('komm.wav', 'komm_der.wav', canal=1)  # Canal derecho
+```
 
 ##### Código de `mono2estereo()`
-```
-#funcion convertir de mono a estereo
+``` #funcion convertir de mono a estereo
 def mono2estereo(ficIzq, ficDer, ficEste):
     """
     Convierte dos archivos WAVE monofónicos en un archivo estéreo.
@@ -327,12 +326,10 @@ def mono2estereo(ficIzq, ficDer, ficEste):
                 datos_estereo = struct.pack('<hh', muestra_izq, muestra_der)
                 out_f.write(datos_estereo)
 
-mono2estereo('komm_izq.wav', 'komm_der.wav', 'komm_reconstruido.wav') 
-```
+mono2estereo('komm_izq.wav', 'komm_der.wav', 'komm_reconstruido.wav') ```
 
 ##### Código de `codEstereo()`
-```
-#codificar señal con 32 bits
+``` #codificar señal con 32 bits
 def codEstereo(ficEste, ficCod):
     """
     Convierte un archivo WAVE estéreo a una señal codificada con 32 bits.
@@ -391,13 +388,11 @@ def codEstereo(ficEste, ficCod):
                 datos_32bits = struct.pack('<ii', semisuma, semidif)
                 f_out.write(datos_32bits)
 
-codEstereo('komm.wav', 'komm_codificado.wav') 
-```
+codEstereo('komm.wav', 'komm_codificado.wav') ```
 
 ##### Código de `decEstereo()`
 
-```
-def decEstereo(ficCod, ficEste):
+``` def decEstereo(ficCod, ficEste):
     """
     Convierte un archivo WAVE monofónico de 32 bits a un archivo estéreo con los dos canales separados.
 
@@ -457,8 +452,7 @@ def decEstereo(ficCod, ficEste):
                 f_out.write(datos_16bits)
 
 
-decEstereo('komm_codificado.wav', 'komm_reconstruido_estereo.wav') 
-```
+decEstereo('komm_codificado.wav', 'komm_reconstruido_estereo.wav') ```
 
 #### Subida del resultado al repositorio GitHub y *pull-request*
 
